@@ -16,7 +16,7 @@
     </header>
     <section>
       <div
-        class="flex flex-col sm:flex-row justify-between items-center p-10 sm:p-24 opacity-90"
+        class="flex flex-col sm:flex-row justify-center items-center p-10 sm:p-24 opacity-90"
       >
         <div
           class="w-[80vw] sm:w-[30vw] sm:min-w-[200px] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
@@ -27,10 +27,12 @@
             type="text"
             placeholder="Enter city"
             class="border-2 p-1 rounded w-[100%] mt-5"
+            id="city"
           />
           <br />
           <button
             class="mt-5 p-1 border-0 rounded w-[100%] bg-blue-400 text-white font-bold"
+            id="getcity"
           >
             Search
           </button>
@@ -48,11 +50,13 @@
           class="flex flex-col gap-10 justify-between items-center p-10 sm:p-24 opacity-90"
         >
           <div
-            class="forecast w-[80vw] sm:w-[30vw] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
+            class="w-[80vw] sm:w-[30vw] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
+            id="current"
           ></div>
 
           <div
-            class="next-forecast w-[80vw] sm:w-[30vw] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
+            class="flex flex-row gap-6 items-center bg-sky-100 border-0 rounded-xl p-4"
+            id="forecast"
           >
             <h2 class="font-extrabold">5-Day Forecast</h2>
           </div>
