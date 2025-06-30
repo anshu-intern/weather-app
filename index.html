@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body
+    class="min-w-[300px] bg-[url(/bg-1.jpg)] sm:bg-[url(/background.jpg)] bg-cover sm:bg-size-[100vw] bg-no-repeat"
+  >
+    <header>
+      <h1 class="p-5 text-center text-5xl text-white bg-blue-400">
+        Weather Dashboard
+      </h1>
+    </header>
+    <section>
+      <div
+        class="flex flex-col sm:flex-row justify-between items-center p-10 sm:p-24 opacity-90"
+      >
+        <div
+          class="w-[80vw] sm:w-[30vw] sm:min-w-[200px] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
+        >
+          <label class="font-extrabold mt-1">Enter city name:</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter city"
+            class="border-2 p-1 rounded w-[100%] mt-5"
+          />
+          <br />
+          <button
+            class="mt-5 p-1 border-0 rounded w-[100%] bg-blue-400 text-white font-bold"
+          >
+            Search
+          </button>
+          <p class="border-b-1 leading-0.5 text-center mt-5 mt-4">
+            <span class="p-2 font-light bg-sky-100">or</span>
+          </p>
+          <button
+            class="mt-5 p-1 border-0 rounded w-[100%] bg-gray-500 text-white font-bold"
+          >
+            Use current location
+          </button>
+        </div>
+
+        <div
+          class="flex flex-col gap-10 justify-between items-center p-10 sm:p-24 opacity-90"
+        >
+          <div
+            class="forecast w-[80vw] sm:w-[30vw] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
+          ></div>
+
+          <div
+            class="next-forecast w-[80vw] sm:w-[30vw] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
+          >
+            <h2 class="font-extrabold">5-Day Forecast</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
