@@ -7,28 +7,31 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body
-    class="min-w-[300px] bg-[url(/bg-1.jpg)] sm:bg-[url(/background.jpg)] bg-cover sm:bg-size-[100vw] bg-no-repeat"
+    class="min-w-[300px] bg-[url(/bg-1.jpg)] sm:bg-[url(/background.jpg)] background"
   >
-    <header>
+    <header class="fixed top-0 w-[100vw] z-1">
       <h1 class="p-5 text-center text-5xl text-white bg-blue-400">
         Weather Dashboard
       </h1>
     </header>
     <section>
       <div
-        class="flex flex-col sm:flex-row justify-center items-center p-10 sm:p-24 opacity-90"
+        class="flex flex-col sm:flex-row flex-wrap justify-center gap-20 sm:gap-8 items-start p-10 sm:p-10 opacity-90 mt-28 sm:mt-16 lg:mt-32 mb-20"
       >
         <div
           class="w-[80vw] sm:w-[30vw] sm:min-w-[200px] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
         >
           <label class="font-extrabold mt-1">Enter city name:</label>
+
           <br />
           <input
             type="text"
             placeholder="Enter city"
-            class="border-2 p-1 rounded w-[100%] mt-5"
+            class="border-2 p-1 rounded w-[100%] mt-5 relative"
             id="city"
+            list="locationDropdown"
           />
+          <datalist id="locationDropdown" class="hidden absolute"> </datalist>
           <br />
           <button
             class="mt-5 p-1 border-0 rounded w-[100%] bg-blue-400 text-white font-bold"
@@ -41,28 +44,35 @@
           </p>
           <button
             class="mt-5 p-1 border-0 rounded w-[100%] bg-gray-500 text-white font-bold"
+            id="getloc"
           >
             Use current location
           </button>
         </div>
-
         <div
-          class="flex flex-col gap-10 justify-between items-center p-10 sm:p-24 opacity-90"
-        >
-          <div
-            class="w-[80vw] sm:w-[30vw] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4"
-            id="current"
-          ></div>
-
-          <div
-            class="flex flex-row gap-6 items-center bg-sky-100 border-0 rounded-xl p-4"
-            id="forecast"
-          >
-            <h2 class="font-extrabold">5-Day Forecast</h2>
-          </div>
-        </div>
+          class="w-[80vw] sm:w-[30vw] max-w-[400px] bg-sky-100 border-0 rounded-xl p-4 sm:hover:scale-[130%] duration-600 hidden"
+          id="current"
+        ></div>
+        <div
+          class="flex flex-col sm:flex-row gap-8 flex-wrap justify-center items-center w-[100%] max-w-[700px] bg-sky-100 border-0 rounded-xl p-4 sm:hover:scale-[130%] duration-600 hidden"
+          id="forecast"
+        ></div>
       </div>
     </section>
+    <footer
+      class="bg-gray-800 h-18 sm:h-24 fixed bottom-0 w-[100vw] mt-10 z-1 p-4"
+    >
+      <p
+        class="text-white text-center p-4 font-bold sm:hover:scale-[110%] duration-500"
+      >
+        Data provided by
+        <u
+          ><a href="https://www.weatherapi.com" target="blank"
+            >WeatherAPI.</a
+          ></u
+        >
+      </p>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
